@@ -112,13 +112,19 @@ const SignupForm = () => {
       // If signup is successful, navigate to the quiz page
       if (response.status === 201) {
         toast.success('Signup successful!');
+        console.log(name);
+        console.log(code);
         setTimeout(() => navigate('/questions'), 1500);
       } else {
         setError('Invalid code or error during signup');
+        console.log(name);
+        console.log(code);
         toast.error('Invalid code or error during signup');
       }
     } catch (err) {
       setError('Error during signup. Please try again.');
+      console.log(name);
+        console.log(code);
       toast.error('Access code wrong');
       console.error('Signup failed:', err);
     }
