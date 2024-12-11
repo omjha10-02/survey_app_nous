@@ -1,0 +1,151 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.loading-text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #6c757d;
+    margin-top: 20px;
+}
+
+/* Container Styles */
+.view-result-container {
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.results-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Title */
+.results-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Question Section */
+.question-section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 30px;
+}
+
+.question-title {
+    font-size: 1.2rem;
+    color: #495057;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* Chart Container */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container canvas {
+    border-radius: 8px;
+}
+
+/* Hover Effect for Cards */
+.question-section:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo {
+    position: fixed; /* Ensures the logo stays in the same place even when scrolling */
+    top: 10px; /* Distance from the top of the viewport */
+    right: 10px; /* Distance from the right of the viewport */
+    z-index: 1000; /* Keeps the logo above other elements */
+    height: 60px; /* Adjust the height of the logo */
+    width: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the image fits properly */
+    background-color: transparent; /* Optional: Add a background if needed */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .results-card {
+        padding: 20px;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .results-title {
+        font-size: 1.5rem;
+    }
+
+    .question-title {
+        font-size: 1rem;
+    }
+
+    .chart-container {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 40px; /* Smaller logo for smaller screens */
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-card {
+        padding: 15px;
+    }
+
+    .results-title {
+        font-size: 1.3rem;
+    }
+
+    .question-title {
+        font-size: 0.9rem;
+    }
+
+    .chart-container {
+        padding: 5px;
+    }
+
+    .logo {
+        height: 30px; /* Even smaller logo for very small screens */
+    }
+}
