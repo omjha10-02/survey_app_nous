@@ -22,8 +22,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy:{
-       '/api':'https://survey-app-nous.onrender.com'
-    
+      // '/api':'https://blog-app-sny5.onrender.com'
+       '/api':'https://survey-app-nous.onrender.com',
     },
   },
   plugins: [react()],
