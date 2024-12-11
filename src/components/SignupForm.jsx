@@ -110,7 +110,7 @@ const SignupForm = () => {
       const response = await axios.post(`${BASE_URL}/auth/signup`, { name,code });
 
       // If signup is successful, navigate to the quiz page
-      if (response.status === 201) {
+      if (response.status !== 201) {
         toast.success('Signup successful!');
         console.log(name);
         console.log(code);
