@@ -16,7 +16,7 @@ const QuizPage = () => {
     const fetchQuestions = async () => {
       try {
         // Use relative URL for proxy compatibility
-        const response = await axios.get('/api/quiz/questions');
+        const response = await axios.get('https://survey-app-nous.onrender.com/api/quiz/questions');
         setQuestions(response.data);
       } catch (err) {
         console.error('Error fetching questions', err);
@@ -45,7 +45,7 @@ const QuizPage = () => {
 
     try {
       // Use relative URL for proxy compatibility
-      await axios.post('/api/quiz/responses', responseData);
+      await axios.post('https://survey-app-nous.onrender.com/api/quiz/responses', responseData);
       console.log('Response submitted successfully');
     } catch (err) {
       console.error('Error submitting response', err);
@@ -70,7 +70,7 @@ const QuizPage = () => {
 
     try {
       // Use relative URL for proxy compatibility
-      await axios.post('/api/quiz/responses', responseData);
+      await axios.post('https://survey-app-nous.onrender.com/api/quiz/responses', responseData);
       console.log('Final response submitted successfully');
 
       toast.success('Quiz Completed Successfully!', {
