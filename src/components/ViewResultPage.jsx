@@ -21,7 +21,7 @@ const ViewResultPage = () => {
     const fetchResults = async () => {
       try {
         // Updated to use relative URL for proxy
-        const response = await axios.get('/api/dashboard/getresult');
+        const response = await axios.get('https://survey-app-nous.onrender.com/api/dashboard/getresult');
         setResults(response.data);
       } catch (err) {
         console.error('Error fetching results', err);
