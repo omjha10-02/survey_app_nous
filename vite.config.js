@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:5000',  // Change this to your backend server URL
+        target: 'https://survey-app-b003.onrender.com',  // Change this to your backend server URL
         changeOrigin: true,
         secure: false,  // Set to true if your backend uses HTTPS
       },
