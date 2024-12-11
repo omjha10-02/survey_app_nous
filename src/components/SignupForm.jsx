@@ -23,7 +23,7 @@ const SignupForm = () => {
 
     try {
       // Use a relative URL for proxy compatibility
-      const response = await axios.post('/api/auth/signup', { name, code });
+      const response = await axios.post('/api/auth/signup', { name });
 
       // If signup is successful, navigate to the quiz page
       if (response.status === 201) {
