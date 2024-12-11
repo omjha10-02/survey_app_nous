@@ -16,7 +16,12 @@ const connectDB = require('./config/db');
 const app = express();
 
 // Middleware
-app.use(cors()); // Enable CORS for cross-origin requests
+
+app.use(cors({
+  origin: 'https://survey-app-nous.vercel.pp/', // Replace with your actual frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 app.use(bodyParser.json()); // Parse JSON request bodies
 
 // Connect to Database
