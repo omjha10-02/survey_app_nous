@@ -41,7 +41,7 @@ const QuizPage = () => {
       questionId: currentQuestion._id,
       selectedOption: selectedOption,
       userId: userId,
-    }; 
+    };
 
     try {
       // Use relative URL for proxy compatibility
@@ -107,29 +107,29 @@ const QuizPage = () => {
         <div className="progress-bar">
           <div
             className="progress"
-            style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+            style={{ width: ${((currentQuestionIndex + 1) / questions.length) * 100}% }}
           ></div>
         </div>
         <div className="question-card">
-          <h2 className="question-number">Question{currentQuestion.number}</h2>
+          <h2 className="question-number">Question {currentQuestion.number}</h2>
           <p className="question-text">{currentQuestion.text}</p>
           <div className="options-container">
             {currentQuestion.options.map((option, index) => (
               <div
                 key={index}
-                className={`option-card ${selectedOption === option ? 'selected' : ''}`}
+                className={option-card ${selectedOption === option ? 'selected' : ''}}
                 onClick={() => handleOptionSelect(option)}
               >
                 <input
                   type="radio"
                   name="option"
-                  id={`option-${index}`}
+                  id={option-${index}}
                   value={option}
                   checked={selectedOption === option}
                   onChange={() => handleOptionSelect(option)}
                   className="radio-input"
                 />
-                <label htmlFor={`option-${index}`} className="option-label">
+                <label htmlFor={option-${index}} className="option-label">
                   {option}
                 </label>
               </div>
