@@ -41,7 +41,7 @@ const QuizPage = () => {
       questionId: currentQuestion._id,
       selectedOption: selectedOption,
       userId: userId,
-    };
+    }; 
 
     try {
       // Use relative URL for proxy compatibility
