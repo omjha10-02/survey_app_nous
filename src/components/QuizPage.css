@@ -46,13 +46,13 @@ body {
     color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%; /* Ensure the card takes full width of the container */
-    height: 100%; /* Fixed height for each question card */
-    overflow: hidden; /* Hide overflow if content exceeds height */
+    height: 350px; /* Fixed height for each question card */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden; /* Hide overflow if content exceeds height */
 }
 
 .question-number {
@@ -67,6 +67,11 @@ body {
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit text to 2 lines */
+    -webkit-box-orient: vertical;
 }
 
 /* Options */
