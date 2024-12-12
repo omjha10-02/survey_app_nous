@@ -111,7 +111,7 @@ const QuizPage = () => {
           ></div>
         </div>
         <div className="question-card">
-          <h2 className="question-number">Question {currentQuestion.number}</h2>
+          <h2 className="question-number">Question</h2>
           <p className="question-text">{currentQuestion.text}</p>
           <div className="options-container">
             {currentQuestion.options.map((option, index) => (
