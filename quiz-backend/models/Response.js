@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const responseSchema = new mongoose.Schema({
   questionId: { type: mongoose.Schema.Types.ObjectId, ref: 'Question', required: true },
-  selectedOption: { type: String, required: true },
+  selectedOptions: { type: [String], required: true }, // Updated to an array
   userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
 });
 
