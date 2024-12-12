@@ -28,7 +28,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 100%;
-    max-width: 900px;
+    max-width: 900px; /* Max width for laptop/desktop view */
     padding: 40px;
     margin-top: 20px;
     animation: fadeIn 1s ease-out;
@@ -101,7 +101,34 @@ body {
     background-color: transparent; /* Optional: Add a background if needed */
 }
 
-/* Responsive Styles */
+/* Desktop / Laptop Styles */
+@media (max-width: 1024px) {
+    .results-card {
+        padding: 30px;
+        max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
+        margin-top: 10px;
+    }
+
+    .results-title {
+        font-size: 1.75rem; /* Slightly smaller title for smaller laptop screens */
+    }
+
+    .question-title {
+        font-size: 1.1rem; /* Adjust the font size of the question titles */
+    }
+
+    .chart-container {
+        padding: 15px;
+    }
+
+    .logo {
+        height: 50px; /* Slightly smaller logo on medium screens */
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
     .results-card {
         padding: 20px;
@@ -110,11 +137,11 @@ body {
     }
 
     .results-title {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Title size reduced for smaller screens */
     }
 
     .question-title {
-        font-size: 1rem;
+        font-size: 1rem; /* Reduced font size for better readability */
     }
 
     .chart-container {
@@ -138,7 +165,7 @@ body {
     }
 
     .question-title {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Further reduce size for small mobile devices */
     }
 
     .chart-container {
