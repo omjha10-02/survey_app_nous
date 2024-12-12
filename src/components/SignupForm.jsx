@@ -45,7 +45,7 @@ const SignupForm = () => {
       <Toaster />
       <img src={logo} alt="Nous Infosystems Logo" className="logo" />
       <div className="signup-card">
-        <h2 className="signup-title">Signup</h2>
+        <h2 className="signup-title">Get Started</h2>
         <form onSubmit={handleSubmit} className="signup-form">
           <div>
             <input
