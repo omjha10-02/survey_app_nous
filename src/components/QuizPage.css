@@ -1,4 +1,3 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
@@ -25,19 +24,30 @@ body {
 }
 
 /* Progress bar */
+.progress-bar-container {
+    margin-bottom: 20px; /* Space between progress bar and question card */
+    text-align: center;
+}
+
+.progress-text {
+    font-size: 16px;
+    color: #2575FC;
+    margin-bottom: 5px;
+}
+
 .progress-bar {
     width: 100%;
-    background: #ccc;
     height: 10px;
+    background-color: #e0e0e0;
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin-top: 5px;
     overflow: hidden;
 }
 
 .progress {
     height: 100%;
-    background: #6a11cb;
-    transition: width 0.3s ease;
+    background-color: #6a11cb;
+    transition: width 0.3s ease-in-out;
 }
 
 /* Question card */
@@ -55,6 +65,12 @@ body {
     justify-content: space-between;
 }
 
+/* Progress bar placed above the question number */
+.question-card > .progress-bar-container {
+    order: -1; /* This ensures progress bar appears above the question number */
+}
+
+/* Question number */
 .question-number {
     font-size: 1.2rem;
     font-weight: bold;
@@ -129,101 +145,3 @@ body {
 .submit-button:active {
     transform: scale(0.95);
 }
-
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-    /* Quiz container */
-    .quiz-container {
-        max-width: 90%;
-        padding: 1rem;
-    }
-
-    /* Progress bar */
-    .progress-bar {
-        height: 8px;
-    }
-
-    /* Question text */
-    .question-text {
-        font-size: 1.4rem;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Question card */
-    .question-card {
-        padding: 1.5rem;
-    }
-
-    /* Options */
-    .options-container {
-        gap: 0.8rem;
-    }
-
-    .option-card {
-        padding: 0.7rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    /* Buttons */
-    .next-button,
-    .submit-button {
-        padding: 0.8rem 1.8rem;
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Quiz container */
-    .quiz-container {
-        max-width: 100%;
-        padding: 1rem;
-    }
-
-    /* Progress bar */
-    .progress-bar {
-        height: 8px;
-    }
-
-    /* Question number */
-    .question-number {
-        font-size: 1rem;
-    }
-
-    /* Question text */
-    .question-text {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    /* Question card */
-    .question-card {
-        padding: 1.2rem;
-    }
-
-    /* Options */
-    .options-container {
-        gap: 0.6rem;
-    }
-
-    .option-card {
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    /* Buttons */
-    .next-button,
-    .submit-button {
-        padding: 0.8rem 1.6rem;
-        font-size: 0.9rem;
-    }
-
-    /* Reduce logo size on mobile */
-    .logo {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        height: 70px;
-        width: 90px;
-    }
-}
-
