@@ -28,7 +28,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 100%;
-    max-width: 900px; /* Max width for laptop/desktop view */
+    max-width: 900px;
     padding: 40px;
     margin-top: 20px;
     animation: fadeIn 1s ease-out;
@@ -68,10 +68,6 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.chart-container canvas {
-    border-radius: 8px;
-}
-
 /* Hover Effect for Cards */
 .question-section:hover {
     background-color: #f1f1f1;
@@ -101,34 +97,24 @@ body {
     background-color: transparent; /* Optional: Add a background if needed */
 }
 
-/* Desktop / Laptop Styles */
-@media (max-width: 1024px) {
-    .results-card {
-        padding: 30px;
-        max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
-        margin-top: 10px;
-    }
-
-    .results-title {
-        font-size: 1.75rem; /* Slightly smaller title for smaller laptop screens */
-    }
-
-    .question-title {
-        font-size: 1.1rem; /* Adjust the font size of the question titles */
-    }
-
-    .chart-container {
-        padding: 15px;
-    }
-
-    .logo {
-        height: 50px; /* Slightly smaller logo on medium screens */
-        top: 8px;
-        right: 8px;
-    }
+/* Switch Button */
+.toggle-button {
+    background-color: #2575FC;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Mobile View Adjustments */
+.toggle-button:hover {
+    background-color: #6a11cb;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .results-card {
         padding: 20px;
@@ -137,11 +123,11 @@ body {
     }
 
     .results-title {
-        font-size: 1.5rem; /* Title size reduced for smaller screens */
+        font-size: 1.5rem;
     }
 
     .question-title {
-        font-size: 1rem; /* Reduced font size for better readability */
+        font-size: 1rem;
     }
 
     .chart-container {
@@ -165,14 +151,10 @@ body {
     }
 
     .question-title {
-        font-size: 0.9rem; /* Further reduce size for small mobile devices */
+        font-size: 0.9rem;
     }
 
     .chart-container {
         padding: 5px;
-    }
-
-    .logo {
-        height: 30px; /* Even smaller logo for very small screens */
     }
 }
